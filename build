@@ -27,7 +27,7 @@ make_metalava(){
 }
 
 make_rom(){
-                make bacon -j16
+                make otapackage -j16
 		zip=$(up out/target/product/ysl/*zip)
 		echo " "
 		echo "$zip"
