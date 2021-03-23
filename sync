@@ -1,7 +1,9 @@
 #!/bin/bash
 
-MANIFEST=git://github.com/hentaiOS/platform_manifest.git
-BRANCH=Rika
+MANIFEST=git://github.com/PixelPlusUI-Elle/manifest.git
+BRANCH=leven
+
+
 
 mkdir -p /tmp/rom
 cd /tmp/rom
