@@ -26,4 +26,3 @@ git clone https://github.com/LineageOS/android_hardware_qcom_audio --single-bran
 git clone https://github.com/nOUr-eldien/android_device_xiaomi_ysl-1.git --depth=1 -b r11.0 device/xiaomi/ysl
 git clone https://github.com/ItsVixano/android_vendor_xiaomi_ysl --depth=1 --single-branch vendor/xiaomi/ysl
 git clone https://github.com/stormbreaker-project/kernel_xiaomi_ysl.git --depth=1 -b eleven kernel/xiaomi/ysl
-Placeholder
