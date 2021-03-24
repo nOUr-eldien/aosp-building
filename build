@@ -25,7 +25,7 @@ make_metalava(){
 	make test-api-stubs-docs
 }
 
-make_rom(){
+make_stag(){
                 mka bacon -j16
 		zip=$(up out/target/product/ysl/stag*zip)
 		echo " "
