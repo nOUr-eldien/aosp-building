@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MANIFEST=git://github.com/PixelPlusUI-Elle/manifest.git
+MANIFEST=git://github.com/StagOS/manifest.git
 BRANCH=eleven
 
 
