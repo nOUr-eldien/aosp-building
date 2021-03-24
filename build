@@ -27,7 +27,7 @@ make_metalava(){
 
 make_rom(){
                 mka bacon -j16
-		zip=$(up out/target/product/ysl/*zip)
+		zip=$(up out/target/product/ysl/stag*zip)
 		echo " "
 		echo "$zip"
 }
