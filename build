@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /tmp/stag # Depends on where source got synced
+cd stag # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
