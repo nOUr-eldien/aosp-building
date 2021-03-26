@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cd aex # Depends on where source got synced
+cd cherish # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
 . build/envsetup.sh
-lunch aex_ysl-userdebug
+lunch cherish_ysl-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -27,9 +27,9 @@ make_metalava(){
 
 make_stag(){
                 mka bacon -j16
-		zip=$(up out/target/product/ysl/stag*zip)
+		zip=$(up out/target/product/ysl/cherish*zip)
 		echo " "
 		echo "$zip"
 }
 make_metalava
-make_aex
+make_cherish
