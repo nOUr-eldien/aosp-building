@@ -32,4 +32,4 @@ make_stag(){
 		echo "$zip"
 }
 make_metalava
-make_cherish
+make bacon
