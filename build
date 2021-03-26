@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cd cherish # Depends on where source got synced
+cd aospa # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
 . build/envsetup.sh
-lunch cherish_ysl-userdebug
+
 export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -19,17 +19,15 @@ up(){
 	curl --upload-file $1 https://transfer.sh/
 }
 
-make_metalava(){
-	make api-stubs-docs
-	make system-api-stubs-docs
-	make test-api-stubs-docs
+
 }
 
-make_stag(){
+
                 mka bacon -j16
-		zip=$(up out/target/product/ysl/cherish*zip)
+		zip=$(up out/target/product/ysl/AOSPA*zip)
 		echo " "
 		echo "$zip"
 }
-make_metalava
-make bacon
+
+./rom-build.sh ysl
+curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/AOSP*
