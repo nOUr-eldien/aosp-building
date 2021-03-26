@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cd stag # Depends on where source got synced
+cd aex # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
 . build/envsetup.sh
-lunch stag_ysl-userdebug
+lunch aex_ysl-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -32,4 +32,4 @@ make_stag(){
 		echo "$zip"
 }
 make_metalava
-make_stag
+make_aex
