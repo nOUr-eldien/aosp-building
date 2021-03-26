@@ -5,7 +5,7 @@ env: # Environt variable to pass to all tasks
 
 task:
     name: nnippon
-    timeout_in: 120m
+    timeout_in: 300m
     container:
       image: apon77/aosp:latest
       cpu: 16
