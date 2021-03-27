@@ -15,19 +15,18 @@ ccache -o compression=true
 ccache -z
 
 # stuffs
-up(){
 	curl --upload-file $1 https://transfer.sh/
-}
 
 
-}
+
+
 
 
                 mka bacon -j16
 		zip=$(up out/target/product/ysl/AOSPA*zip)
 		echo " "
 		echo "$zip"
-}
+
 
 ./rom-build.sh ysl
 curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/AOSP*
