@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd aospa # Depends on where source got synced
+cd aicp # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 
 # Normal build steps
@@ -28,5 +28,6 @@ ccache -z
 		echo "$zip"
 
 
-./rom-build.sh ysl
-curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/AOSP*
+lunch aicp_ysl-userdebug
+make bacon
+curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/aicp*
