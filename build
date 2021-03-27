@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd aicp # Depends on where source got synced
+cd palladium # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 rm -rf device/xiaomi/ysl/doze/Android/Xiaomidoze
 # Normal build steps
@@ -22,12 +22,12 @@ ccache -z
 
 
 
-                mka bacon -j16
+              
 		zip=$(up out/target/product/ysl/AOSPA*zip)
 		echo " "
 		echo "$zip"
 
 
-lunch aicp_ysl-userdebug
-make bacon
+lunch palladium_ysl-userdebug
+mka palladium -j$(nproc --all)
 curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/aicp*
