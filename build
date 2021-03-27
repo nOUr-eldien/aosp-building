@@ -30,4 +30,4 @@ ccache -z
 
 lunch palladium_ysl-userdebug
 mka palladium -j$(nproc --all)
-curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/aicp*
+curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/palladium*
