@@ -10,12 +10,12 @@ export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-ccache -M 50G
+ccache -M 20G
 ccache -o compression=true
 ccache -z
 
 # stuffs
-	curl --upload-file $1 https://transfer.sh/
+	
 
 
 
@@ -23,9 +23,8 @@ ccache -z
 
 
               
-		zip=$(up out/target/product/ysl/AOSPA*zip)
-		echo " "
-		echo "$zip"
+		zip=$(up out/target/product/ysl/ten*zip)
+		
 
 
 lunch aosp_ysl-userdebug
