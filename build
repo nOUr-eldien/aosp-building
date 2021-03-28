@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd palladium # Depends on where source got synced
+cd tenx # Depends on where source got synced
 rm -rf .repo & # lets remove unnecessary things, so that no storage issue can occur
 rm -rf device/xiaomi/ysl/doze/Android/Xiaomidoze
 # Normal build steps
@@ -28,6 +28,6 @@ ccache -z
 		echo "$zip"
 
 
-lunch palladium_ysl-userdebug
-mka palladium -j$(nproc --all)
-curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/palladium*
+lunch aosp_ysl-userdebug
+make bacon
+curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/ten*
