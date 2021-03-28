@@ -29,5 +29,5 @@ ccache -z
 
 
 lunch aosp_ysl-userdebug
-make bacon
+make bacon -j16
 curl -sL https://git.io/file-transfer | sh && ./transfer wet out/target/product/ysl/ten*
