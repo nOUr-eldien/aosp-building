@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /tmp
+cd tenx
 
 # Compress function with pigz for faster compression
 com () 
@@ -12,4 +12,4 @@ time com ccache 1 # Compression level 1, its enough
 
 mkdir -p ~/.config/rclone
 echo "$rclone_config" > ~/.config/rclone/rclone.conf
-time rclone copy ccache.tar.gz gdrive:ccache/aicp -P
+time rclone copy ccache.tar.gz gdrive:ccache/tenx -P
