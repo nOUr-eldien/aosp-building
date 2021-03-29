@@ -5,7 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch aosp_ysl-userdebug
+lunch lineage_ysl-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -26,7 +26,7 @@ make_metalava(){
 }
 
 make_rom(){
-                brunch ysl
+                make bacon -j16
 		zip=$(up out/target/product/ysl/*zip)
 		echo " "
 		echo "$zip"
